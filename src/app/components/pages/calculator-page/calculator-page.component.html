@@ -1,0 +1,24 @@
+<section class="container">
+  <h2>Calculator</h2>
+  <input class="calc-input" type="text" [(ngModel)]="value" readonly />
+  <div class="buttons-container">
+    <div class="buttons numbers-container">
+      <button
+        *ngFor="let number of numbers"
+        class="calc-button"
+        (click)="onNumberClick(number)"
+      >
+        {{ number }}
+      </button>
+    </div>
+    <div class="buttons operations-container">
+      <button
+        *ngFor="let operation of operations"
+        class="calc-button"
+        (click)="onOperationClick(operation)"
+      >
+        {{ operation }}
+      </button>
+    </div>
+  </div>
+</section>
